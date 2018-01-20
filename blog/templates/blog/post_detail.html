@@ -3,7 +3,6 @@
 
 {% block content %}
     <div class="content">
-    {% for post in posts %}
         <div class="post">
         <div class="date">
             published: {{ post.publish_date }}
@@ -11,6 +10,5 @@
         <h2><a href="{%url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
         <p>{{ post.text }}</p>
         </div>
-    {%  endfor %}
     </div>
 {% endblock %}
